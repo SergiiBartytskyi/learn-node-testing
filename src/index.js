@@ -1,4 +1,4 @@
-import DetectFileEncodingAndLanguage from 'detect-file-encoding-and-language';
+// import DetectFileEncodingAndLanguage from 'detect-file-encoding-and-language';
 // !       readFile
 
 //? ---------- sync -----------
@@ -66,14 +66,14 @@ import DetectFileEncodingAndLanguage from 'detect-file-encoding-and-language';
 
 // !       writeFile
 
-import * as fs from 'node:fs/promises';
+// import * as fs from 'node:fs/promises';
 
-const func = async () => {
-  const filepath = './src/text.txt';
-  const result = await fs.writeFile(filepath, 'Java the best!');
-  console.log('result ', result);
-  const result2 = await fs.writeFile('./src/text2.txt', 'JavaScript the best!');
-  console.log('result2 ', result2);
-};
+// const func = async () => {
+//   const filepath = './src/text.txt';
+//   const result = await fs.writeFile(filepath, 'Java the best!');
+//   console.log('result ', result);
+//   const result2 = await fs.writeFile('./src/text2.txt', 'JavaScript the best!');
+//   console.log('result2 ', result2);
+// };
 
-func();
+// func();

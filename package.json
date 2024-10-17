@@ -7,7 +7,12 @@
     "lint": "eslint src/**/*.js",
     "start": "node src/index.js",
     "dev": "nodemon src/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "get-all": "node src/scripts/getAllSongs.js",
+    "generate": "node src/scripts/generate.js",
+    "generate-one": "node src/scripts/generateOneSong.js",
+    "remove-last": "node src/scripts/removeLastSong.js",
+    "remove-all": "node src/scripts/removeAllSongs.js"
   },
   "keywords": [],
   "author": "",
@@ -15,10 +20,10 @@
   "description": "",
   "devDependencies": {
     "@eslint/js": "^9.12.0",
+    "@faker-js/faker": "^9.0.3",
     "eslint": "^9.12.0",
     "globals": "^15.11.0",
-    "nodemon": "^3.1.7",
-    "ts-node": "^10.9.2"
+    "nodemon": "^3.1.7"
   },
   "dependencies": {
     "cors": "^2.8.5",
