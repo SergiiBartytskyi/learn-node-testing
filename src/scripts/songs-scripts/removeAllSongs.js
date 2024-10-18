@@ -1,4 +1,4 @@
-import { writeSongs } from '../utils/writeSongs.js';
+import { writeSongs } from '../utils/songs-utils/writeSongs.js';
 
 const removeAllSongs = async () => await writeSongs([]);
 removeAllSongs();
