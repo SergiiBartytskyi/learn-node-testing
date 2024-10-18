@@ -1,1 +1,51 @@
-[]
+[
+  {
+    "id": "57a6ecda-0a34-4e6a-81dd-72cf8141dc4c",
+    "album": "Let's Skip To The Wedding",
+    "artist": "Rick Ross",
+    "genre": "Quiet Storm",
+    "songName": "Here in My Heart"
+  },
+  {
+    "id": "de348597-9a1e-4036-b718-e82aac95ade5",
+    "album": "Sit Still, Look Pretty",
+    "artist": "Madison Beer",
+    "genre": "Folk",
+    "songName": "Wannabe"
+  },
+  {
+    "id": "346aa24c-fd23-49e2-9fa7-8da9fac97a83",
+    "album": "Finding Beauty In Negative Spaces",
+    "artist": "Pamungkas",
+    "genre": "Renaissance",
+    "songName": "Shake Down"
+  },
+  {
+    "id": "f2d460dd-1cc6-4f0f-aad5-56a62ee02fc0",
+    "album": "Busyhead",
+    "artist": "Timmy Trumpet",
+    "genre": "Swing",
+    "songName": "Chattanoogie Shoe-Shine Boy"
+  },
+  {
+    "id": "97d237fc-e22d-4331-bd57-80b0e2bc0600",
+    "album": "Crash Talk",
+    "artist": "Bazzi",
+    "genre": "Hip Hop",
+    "songName": "Me & Bobby McGee"
+  },
+  {
+    "id": "3a43c2c0-ec1f-41a3-9466-462e5bad2a70",
+    "album": "Graduation",
+    "artist": "Boyce Avenue",
+    "genre": "CCM",
+    "songName": "Crazy"
+  },
+  {
+    "id": "1b151efa-cf40-4551-bf36-b41592612e6d",
+    "album": "Playa Saturno",
+    "artist": "Grouplove",
+    "genre": "Mawwal",
+    "songName": "Kiss"
+  }
+]

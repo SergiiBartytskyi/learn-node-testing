@@ -1,6 +1,6 @@
-import { readSongs } from '../utils/songs-utils/readSongs.js';
-import { writeSongs } from '../utils/songs-utils/writeSongs.js';
-import { createFakeSong } from '../utils/songs-utils/createFakeSong.js';
+import { readSongs } from '../../utils/songs-utils/readSongs.js';
+import { writeSongs } from '../../utils/songs-utils/writeSongs.js';
+import { createFakeSong } from '../../utils/songs-utils/createFakeSong.js';
 
 const generateOneSong = async () => {
   const songs = await readSongs();

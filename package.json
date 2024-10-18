@@ -8,11 +8,13 @@
     "start": "node src/index.js",
     "dev": "nodemon src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "get-all": "node src/scripts/getAllSongs.js",
-    "generate": "node src/scripts/generate.js",
-    "generate-one": "node src/scripts/generateOneSong.js",
-    "remove-last": "node src/scripts/removeLastSong.js",
-    "remove-all": "node src/scripts/removeAllSongs.js"
+    "get-all": "node src/scripts/songs-scripts/getAllSongs.js",
+    "generate": "node src/scripts/songs-scripts/generate.js",
+    "generate-one": "node src/scripts/songs-scripts/generateOneSong.js",
+    "get-сount": "node src/scripts/songs-scripts/getCount.js",
+    "remove-last": "node src/scripts/songs-scripts/removeLastSong.js",
+    "remove-all": "node src/scripts/songs-scripts/removeAllSongs.js",
+    "remove-random": "node src/scripts/songs-scripts/removeRandomSong.js"
   },
   "keywords": [],
   "author": "",
