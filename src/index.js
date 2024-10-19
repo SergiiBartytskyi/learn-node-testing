@@ -126,8 +126,14 @@
 //   console.log(`Server is running  on port ${PORT}`);
 // });
 
-// !     запуск сервера з server.js
+// !     запуск сервера з MongoDB
 
+import { initMongoDB } from './db/initMongoDB.js';
 import { startServer } from './server.js';
 
-startServer();
+const bootstrap = async () => {
+  await initMongoDB();
+  startServer();
+};
+
+bootstrap();

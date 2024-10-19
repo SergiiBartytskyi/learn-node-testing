@@ -1,6 +1,7 @@
 import express from 'express';
 import pino from 'pino-http';
 import cors from 'cors';
+import { getAllStudents, getStudentById } from './services/students.js';
 
 import { env } from './utils/env.js';
 
@@ -23,6 +24,32 @@ export const startServer = () => {
   app.get('/', (req, res) => {
     res.json({
       message: 'Hello world!',
+    });
+  });
+
+  app.get('/students', async (req, res) => {
+    const students = await getAllStudents();
+
+    res.status(200).json({
+      data: students,
+    });
+  });
+
+  app.get('/students/:studentId', async (req, res, next) => {
+    const { studentId } = req.params;
+    const student = await getStudentById(studentId);
+
+    // Відповідь, якщо контакт не знайдено
+    if (!student) {
+      res.status(404).json({
+        message: 'Student not found',
+      });
+      return;
+    }
+
+    // Відповідь, якщо контакт знайдено
+    res.status(200).json({
+      data: student,
     });
   });
 
