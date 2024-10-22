@@ -54,7 +54,7 @@ export const deleteStudentController = async (req, res, next) => {
 };
 
 export const upsertStudentController = async (req, res, next) => {
-  const { studentId } = req.body;
+  const { studentId } = req.params;
   const results = await updateStudent(studentId, req.body, { upsert: true });
 
   if (!results) {
