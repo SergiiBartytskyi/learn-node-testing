@@ -6,9 +6,22 @@ import {
   getStudentById,
   updateStudent,
 } from '../services/students.js';
+import { parsePaginationParams } from '../utils/parsePaginationParams.js';
+import { parseSortParams } from '../utils/parseSortParams.js';
+import { parseFilterParams } from '../utils/parseFilterParams.js';
 
 export const getStudentsController = async (req, res, next) => {
-  const students = await getAllStudents();
+  const { page, perPage } = parsePaginationParams(req.query);
+  const { sortBy, sortOrder } = parseSortParams(req.query);
+  const filter = parseFilterParams(req.query);
+
+  const students = await getAllStudents({
+    page,
+    perPage,
+    sortBy,
+    sortOrder,
+    filter,
+  });
 
   res.json({
     status: 200,
@@ -17,12 +30,13 @@ export const getStudentsController = async (req, res, next) => {
   });
 };
 
-export const getStudentByIdController = async (req, res) => {
+export const getStudentByIdController = async (req, res, next) => {
   const { studentId } = req.params;
   const student = await getStudentById(studentId);
 
   if (!student) {
-    throw createHttpError(404, 'Student not found');
+    // throw createHttpError(404, 'Student not found');
+    next(createHttpError(404, 'Student not found'));
   }
 
   res.json({
@@ -50,7 +64,7 @@ export const deleteStudentController = async (req, res, next) => {
     return;
   }
 
-  res.status(404).send();
+  res.status(204).send();
 };
 
 export const upsertStudentController = async (req, res, next) => {
