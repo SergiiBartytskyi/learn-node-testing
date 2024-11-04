@@ -1,6 +1,7 @@
 import { model, Schema } from 'mongoose';
+import { ROLES } from '../../constants/index.js';
 
-const userSchema = new Schema(
+const usersSchema = new Schema(
   {
     name: {
       type: String,
@@ -15,6 +16,11 @@ const userSchema = new Schema(
       type: String,
       required: true,
     },
+    role: {
+      type: String,
+      enum: [ROLES.TEACHER, ROLES.PARENT],
+      default: ROLES.PARENT,
+    },
   },
   {
     timestamps: true,
@@ -22,10 +28,10 @@ const userSchema = new Schema(
   },
 );
 
-userSchema.methods.toJSON = function () {
+usersSchema.methods.toJSON = function () {
   const obj = this.toObject();
   delete obj.password;
   return obj;
 };
 
-export const UsersCollections = model('users', userSchema);
+export const UsersCollection = model('users', usersSchema);
